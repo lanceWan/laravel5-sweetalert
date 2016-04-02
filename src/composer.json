@@ -1,6 +1,6 @@
 {
-    "name": "lancewan/laravel-sweetalert",
-    "description": "sweetalert.js for laravel5.2\\",
+    "name": "lancewan/laravel5-sweetalert",
+    "description": "sweetalert.js for laravel5.2",
     "license": "MIT",
     "authors": [
         {

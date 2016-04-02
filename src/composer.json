@@ -1,0 +1,17 @@
+{
+    "name": "lancewan/laravel-sweetalert",
+    "description": "sweetalert.js for laravel5.2\\",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "iwanli",
+            "email": "709344897@qq.com"
+        }
+    ],
+    "require": {},
+    "autoload": { 
+        "psr-4": {
+            "Lance\\Sweet\\": "src/" 
+        } 
+    }
+}

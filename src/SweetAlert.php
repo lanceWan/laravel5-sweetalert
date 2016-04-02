@@ -47,7 +47,6 @@ class SweetAlert
 	{
 
 		$notifications = $this->session->get('sweet:notifications');
-
 		if (!$notifications) {
 			return '';
 		}
@@ -65,7 +64,7 @@ class SweetAlert
 			// dd($config);
 			
 			if($config) {
-                $notification = array_merge($config, $notification);
+                $notification = array_unique(array_merge($config, $notification));
             }
 
             if ($notification) {
@@ -73,6 +72,7 @@ class SweetAlert
             }
             
 		}
+		$this->clear();
 		return view('Sweet::sweet', compact('javascript','css','js'));
 	}
 
@@ -98,7 +98,7 @@ class SweetAlert
             'text' => $message
         ];
         if ($options) {
-        	$this->notifications = array_merge($options,$this->notifications);
+        	$this->notifications = array_unique(array_merge($options,$this->notifications));
         }
         $this->session->flash('sweet:notifications', $this->notifications);
 	}

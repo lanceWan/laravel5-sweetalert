@@ -4,7 +4,6 @@ namespace Lance\Sweet;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Blade;
-use Sweet;
 
 class SweetAlertServiceProvider extends ServiceProvider
 {
@@ -22,7 +21,6 @@ class SweetAlertServiceProvider extends ServiceProvider
             __DIR__.'/views' => base_path('resources/views/vendor/sweet'),
             __DIR__.'/config/sweet.php' => config_path('sweet.php'),
         ]);
-        $this->registerBladeExtensions();
     }
 
     /**
@@ -40,12 +38,5 @@ class SweetAlertServiceProvider extends ServiceProvider
     public function provides()
     {
         return ['sweet'];
-    }
-
-    public function registerBladeExtensions()
-    {
-        Blade::directive('sweet', function () {
-            return Sweet::render();
-        });
     }
 }

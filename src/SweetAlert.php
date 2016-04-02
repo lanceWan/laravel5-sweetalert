@@ -85,7 +85,7 @@ class SweetAlert
 	 * @param  [type]                   $title   [sweetalert标题]
 	 * @param  array                    $options [其他额外配置]
 	 */
-	public function create($type,$message,$title=null,$options=[])
+	public function create($type,$message,$title='',$options=[])
 	{
 		$types = ['info', 'warning', 'success', 'error'];
 
@@ -111,7 +111,7 @@ class SweetAlert
 	 * @param  [type]                   $title   [sweetalert标题]
 	 * @param  array                    $options [其他额外配置]
 	 */
-	public function info($message,$title=null,$options=[])
+	public function info($message,$title='',$options=[])
 	{
 		$this->create('info',$message,$title,$options);
 	}
@@ -124,7 +124,7 @@ class SweetAlert
 	 * @param  [type]                   $title   [sweetalert标题]
 	 * @param  array                    $options [其他额外配置]
 	 */
-	public function warning($message,$title=null,$options=[])
+	public function warning($message,$title='',$options=[])
 	{
 		$this->create('warning',$message,$title,$options);
 	}
@@ -138,7 +138,7 @@ class SweetAlert
 	 * @param  [type]                   $title   [sweetalert标题]
 	 * @param  array                    $options [其他额外配置]
 	 */
-	public function success($message,$title=null,$options=[])
+	public function success($message,$title='',$options=[])
 	{
 		$this->create('success',$message,$title,$options);
 	}
@@ -152,7 +152,7 @@ class SweetAlert
 	 * @param  [type]                   $title   [sweetalert标题]
 	 * @param  array                    $options [其他额外配置]
 	 */
-	public function error($message,$title=null,$options=[])
+	public function error($message,$title='',$options=[])
 	{
 		$this->create('error',$message,$title,$options);
 	}
